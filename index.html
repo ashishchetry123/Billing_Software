@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Software</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="container">
+            <h1>Billing Software</h1>
+            <form id="billing-form">
+                <label for="item">Item:</label>
+                <input type="text" id="item" required>
+
+                <label for="price">Price:</label>
+                <input type="number" id="price" required>
+
+                <button type="button" onclick="addItem()">Add Item</button>
+            </form>
+
+            <div class="cart-section">
+                <h2>Cart</h2>
+                <ul id="cart-items"></ul>
+                <h3>Total: $<span id="total-amount">0.00</span></h3>
+                <button id="buy-button">Buy Now</button>
+                <div id="payment-source" class="hidden">
+                    <p>Pay through: <a href="#" id="payment-link">Payment Gateway</a></p>
+                    <img id="qr-code" src="" alt="QR Code" class="hidden">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
